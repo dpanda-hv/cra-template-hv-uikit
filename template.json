@@ -1,12 +1,5 @@
 {
   "package": {
-    "name": "hv-uikit-app",
-    "author": {
-      "name": "Hitachi Vantara"
-    },
-    "version": "1.0.0",
-    "description": "HV UIKIT Sample App",
-    "private": true,
     "dependencies": {
       "@hv/uikit-common-themes": "^3.0.2",
       "@hv/uikit-react-core": "^3.36.0",
@@ -47,7 +40,6 @@
     },
     "scripts": {
       "serve": "serve -s build",
-      "build-and-serve": "npm run build && npm run serve",
       "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
       "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'"
     },

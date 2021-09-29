@@ -8,7 +8,7 @@ interface LumadaLogoPropTypes {
 const LumadaLogo: React.FC<LumadaLogoPropTypes> = ({
   width,
 }: LumadaLogoPropTypes) => {
-  const theme: any = useTheme();
+  const theme = useTheme();
   const { acce1, acce3 } = theme.hv.palette.accent;
   return (
     <svg

@@ -18,11 +18,14 @@ const mergedPackage = {
   },
 };
 
-fs.writeFileSync(
-  './template/package.json',
-  JSON.stringify(mergedPackage, null, 2)
-);
+shell.exec('rm -rf app');
 
-shell.cd(`template`);
+shell.cp('-r', 'template', 'app');
+
+fs.writeFileSync('./app/package.json', JSON.stringify(mergedPackage, null, 2));
+
+shell.cd(`app`);
+
 shell.exec(`npm install`);
+
 shell.exec(`npm start`);

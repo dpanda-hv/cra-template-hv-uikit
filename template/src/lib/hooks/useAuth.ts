@@ -20,9 +20,11 @@ export const useAuth = () => {
       setIsAuthed(true);
       setAuthStatus("success");
       await delay(2000).then(() => setAuthStatus("idle"));
-    } catch (error: any) {
+    } catch (error) {
       setAuthStatus("error");
-      setAuthMessage(error.message);
+      if (error instanceof Error) {
+        setAuthMessage(error.message);
+      }
       await delay(2000).then(() => setAuthStatus("idle"));
     }
   };

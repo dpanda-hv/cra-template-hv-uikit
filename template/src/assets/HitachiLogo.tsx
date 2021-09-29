@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@material-ui/core";
 
 const HitachiLogo = (props) => {
-  const theme: any = useTheme();
+  const theme = useTheme();
   const color = theme.hv.palette.accent.acce1;
   return (
     <svg
